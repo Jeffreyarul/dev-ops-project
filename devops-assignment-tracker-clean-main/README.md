@@ -1,83 +1,120 @@
-# Student Assignment Tracker - DevOps Project
+# dev-ops-project
 
-Modern Flask + SQLite assignment tracker with Docker, Jenkins pipeline, Kubernetes manifests, and Ansible deployment automation.
+A DevOps-focused student assignment tracker built with Flask and SQLite. This repository includes local app code, container packaging, CI/CD pipeline support, Kubernetes manifests, and Ansible deployment automation.
 
-## Folder structure
+## Repository layout
 
-- `backend/` - Flask app and Python dependencies
+- `backend/` - Flask application and Python dependencies
 - `frontend/` - HTML templates and static assets
-- `devops/` - Kubernetes and Ansible files
-  - `devops/k8s/` - deployment and service manifests
-  - `devops/ansible/` - playbook for Docker-based deployment
+- `devops/` - infrastructure automation files
+  - `devops/k8s/` - Kubernetes deployment/service manifests
+  - `devops/ansible/` - Ansible playbook for deployment
+- `Dockerfile` - container image build instructions
+- `docker-compose.yml` - local compose setup
+- `Jenkinsfile` - CI/CD pipeline definition
+- `.github/workflows/docker.yml` - GitHub Actions Docker workflow
 
-## Local run (without Docker)
+## Prerequisites
 
-1. Create virtual environment:
-   - `python3 -m venv .venv`
-2. Activate it:
-   - `source .venv/bin/activate`
+- Python 3.10+ installed
+- Docker installed for container builds
+- Git installed for repository management
+- Optional: `kubectl`, `minikube`, `ansible`, and `ansible-galaxy` for DevOps automation
+
+## Run locally (without Docker)
+
+1. Create a Python virtual environment:
+   - `python -m venv .venv`
+2. Activate the environment:
+   - macOS/Linux: `source .venv/bin/activate`
+   - Windows (PowerShell): `.\.venv\Scripts\Activate`
 3. Install dependencies:
    - `pip install -r backend/requirements.txt`
-4. Start app:
+4. Start the Flask app:
    - `python backend/app.py`
-5. Open browser:
+5. Open the app in your browser:
    - `http://127.0.0.1:5000`
 
-## Docker - step by step
+## Docker
 
-1. Go to project folder:
-   - `cd /Users/viknans/Desktop/devops-assignment-tracker`
-2. Build Docker image:
-   - `docker build -t student-assignment-tracker:latest .`
-3. Run container:
-   - `docker run -d --name student-assignment-tracker -p 5000:5000 student-assignment-tracker:latest`
-4. Check running container:
-   - `docker ps`
-5. Open app:
-   - `http://localhost:5000`
-6. Stop container when needed:
-   - `docker stop student-assignment-tracker`
-7. Remove container when needed:
-   - `docker rm student-assignment-tracker`
+Build and run the project in a Docker container:
+
+```bash
+cd c:/Users/ursra/Downloads/devops-assignment-tracker-clean-main
+docker build -t dev-ops-project:latest .
+docker run -d --name dev-ops-project -p 5000:5000 dev-ops-project:latest
+```
+
+Then open:
+
+- `http://localhost:5000`
+
+To stop and remove the container:
+
+```bash
+docker stop dev-ops-project
+docker rm dev-ops-project
+```
+
+Alternatively, use Docker Compose:
+
+```bash
+docker compose up --build
+```
 
 ## Jenkins pipeline
 
-`Jenkinsfile` includes stages:
-- Build - create venv and install dependencies
-- Test - compile-check `backend/app.py`
-- Docker Build - build image
-- Deploy - run container on port `5000`
+The `Jenkinsfile` is designed to support a simple CI/CD flow with stages such as:
 
-## Kubernetes - step by step
+- Install dependencies
+- Run basic validation
+- Build Docker image
+- Deploy the container
 
-1. Build image:
-   - `docker build -t student-assignment-tracker:latest .`
-2. If using Minikube, load image into cluster:
-   - `minikube image load student-assignment-tracker:latest`
-3. Apply deployment:
+Use Jenkins to execute the pipeline from the repository root.
+
+## Kubernetes deployment
+
+1. Build the Docker image:
+   - `docker build -t dev-ops-project:latest .`
+2. If using Minikube, load the image:
+   - `minikube image load dev-ops-project:latest`
+3. Apply manifests:
    - `kubectl apply -f devops/k8s/deployment.yaml`
-4. Apply service:
    - `kubectl apply -f devops/k8s/service.yaml`
-5. Check pods:
+4. Verify resources:
    - `kubectl get pods`
-6. Check service:
    - `kubectl get svc assignment-tracker-service`
-7. Access app:
-   - On Minikube: `minikube service assignment-tracker-service --url`
-   - On a node: `http://<node-ip>:30080`
 
-## Ansible - step by step
+If you need to access the service locally with Minikube:
 
-1. Install collection used by playbook:
-   - `ansible-galaxy collection install community.docker`
-2. Create inventory file (example `inventory.ini`):
-   - `[app]`
-   - `your-server-ip ansible_user=ubuntu`
-3. Run playbook:
-   - `ansible-playbook -i inventory.ini devops/ansible/ansible-playbook.yml`
+```bash
+minikube service assignment-tracker-service --url
+```
 
-What this playbook does in simple words:
-- Installs Docker
-- Starts Docker service
-- Pulls app image
-- Runs app container on port `5000`
+## Ansible deployment
+
+Install required collection first:
+
+```bash
+ansible-galaxy collection install community.docker
+```
+
+Create an inventory file, for example `inventory.ini`:
+
+```ini
+[app]
+your-server-ip ansible_user=ubuntu
+```
+
+Then run the playbook:
+
+```bash
+ansible-playbook -i inventory.ini devops/ansible/ansible-playbook.yml
+```
+
+The playbook installs Docker, starts the service, and runs the app container on port `5000`.
+
+## GitHub repository
+
+This project is published at: `https://github.com/Jeffreyarul/dev-ops-project`
