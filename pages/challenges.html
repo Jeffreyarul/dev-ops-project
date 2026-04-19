@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - WMSN Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">WMSN Security</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="importance.html">Importance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="challenges.html">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="future.html">Future Directions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search the site...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container">
+        <div id="readingProgress" class="reading-progress-bar"></div>
+    </div>
+
+    <div class="container my-5">
+        <h1 class="mb-4">Security and Privacy Challenges in WMSNs</h1>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <h2>Wireless Communication Vulnerabilities</h2>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Data Interception and Eavesdropping</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Wireless signals can be intercepted using radio frequency (RF) monitoring equipment. Attackers can capture sensitive medical data without physical access to the network.</p>
+                        <ul>
+                            <li>Passive attacks: Listening to transmissions</li>
+                            <li>Active attacks: Modifying or injecting data</li>
+                            <li>Man-in-the-middle attacks: Intercepting communication between devices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Denial of Service (DoS) Attacks</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Attackers can flood the network with malicious traffic, preventing legitimate medical data from reaching healthcare providers.</p>
+                        <ul>
+                            <li>Jamming: Overwhelming wireless channels</li>
+                            <li>Flooding: Exhausting network resources</li>
+                            <li>Sleep deprivation: Preventing sensors from entering low-power modes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Device-Level Security Issues</h2>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Physical Tampering</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Sensors attached to patients are vulnerable to physical attacks:</p>
+                        <ul>
+                            <li>Node capture: Stealing devices for analysis</li>
+                            <li>Side-channel attacks: Analyzing power consumption or electromagnetic emissions</li>
+                            <li>Malware injection: Infecting devices with malicious software</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Resource Constraints</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Medical sensors have limited capabilities:</p>
+                        <ul>
+                            <li>Battery life: Security protocols consume energy</li>
+                            <li>Processing power: Complex cryptography may be infeasible</li>
+                            <li>Memory: Limited storage for security keys and logs</li>
+                            <li>Communication bandwidth: Constrains secure protocol overhead</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Network and System-Level Challenges</h2>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Scalability and Management</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>As WMSN deployments grow, security becomes increasingly complex:</p>
+                        <ul>
+                            <li>Key management for thousands of devices</li>
+                            <li>Dynamic network topology changes</li>
+                            <li>Interoperability with existing healthcare systems</li>
+                            <li>Real-time security updates and patches</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Privacy Preservation</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Balancing data utility with patient privacy:</p>
+                        <ul>
+                            <li>Data aggregation without compromising individual privacy</li>
+                            <li>Anonymization techniques that preserve medical utility</li>
+                            <li>Consent management for data sharing</li>
+                            <li>Cross-border data transfer regulations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Human Factors</h2>
+                <p>Security is often compromised by human elements:</p>
+                <ul>
+                    <li>Weak passwords and authentication practices</li>
+                    <li>Insider threats from healthcare personnel</li>
+                    <li>Lack of security awareness and training</li>
+                    <li>Supply chain vulnerabilities in device manufacturing</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Attack Vectors</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h6>Wireless Attacks</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%">85%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Physical Attacks</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 70%">70%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Software Exploits</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 60%">60%</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6>Human Factors</h6>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Common Vulnerabilities</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Weak encryption algorithms</li>
+                            <li class="list-group-item">Default credentials</li>
+                            <li class="list-group-item">Unpatched firmware</li>
+                            <li class="list-group-item">Insecure data storage</li>
+                            <li class="list-group-item">Lack of access controls</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Related Topics</h5>
+                    </div>
+                    <div class="card-body">
+                        <a href="solutions.html" class="btn btn-outline-primary btn-sm me-2 mb-2">Countermeasures</a>
+                        <a href="future.html" class="btn btn-outline-primary btn-sm">Future Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Bar -->
+    <div class="tools-bar">
+        <button id="darkModeToggle" class="tool-btn" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="glossaryBtn" class="tool-btn" title="Open Glossary">
+            <i class="fas fa-book"></i>
+        </button>
+    </div>
+
+    <!-- Glossary Modal -->
+    <div id="glossaryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Glossary of Terms</h5>
+                <span id="closeGlossary" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="glossaryContent">
+                    <!-- Glossary content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 Enhancing Security in WMSNs. All rights reserved.</p>
+            <p id="currentDateTime" class="mb-0"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

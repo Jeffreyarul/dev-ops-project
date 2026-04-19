@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WMSN Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">WMSN Security</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="importance.html">Importance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="challenges.html">Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="solutions.html">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="future.html">Future Directions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search the site...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress-container">
+        <div id="readingProgress" class="reading-progress-bar"></div>
+    </div>
+
+    <div class="container my-5">
+        <h1 class="mb-4 text-center">Contact Us</h1>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Get in Touch</h5>
+                        <p class="card-text">Have questions about WMSN security? Want to collaborate on research or implementation? We'd love to hear from you.</p>
+
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject">
+                                    <option selected>General Inquiry</option>
+                                    <option>Research Collaboration</option>
+                                    <option>Technical Support</option>
+                                    <option>Partnership Opportunities</option>
+                                    <option>Media Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div id="formErrors"></div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Information</h5>
+                        <div class="mb-3">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@wmsnsecurity.com">info@wmsnsecurity.com</a>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Research Inquiries:</strong><br>
+                            <a href="mailto:research@wmsnsecurity.com">research@wmsnsecurity.com</a>
+                        </div>
+                        <div class="mb-3">
+                            <strong>Phone:</strong><br>
+                            +1 (555) 123-4567
+                        </div>
+                        <div class="mb-3">
+                            <strong>Address:</strong><br>
+                            Department of Cybersecurity<br>
+                            Medical Technology Institute<br>
+                            123 Innovation Drive<br>
+                            Tech City, TC 12345
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Follow Us</h5>
+                        <p>Stay updated with the latest developments in WMSN security:</p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Twitter</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">ResearchGate</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Newsletter</h5>
+                        <p>Subscribe to our newsletter for monthly updates on WMSN security research and best practices.</p>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Frequently Asked Questions</h5>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        How can I implement WMSN security in my healthcare facility?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Start with a comprehensive security assessment, then implement layered security measures including encryption, authentication, and monitoring. We recommend consulting with certified security professionals.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        What are the compliance requirements for WMSN security?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Compliance varies by region but typically includes HIPAA (US), GDPR (EU), and industry standards like ISO 27001. Regular audits and documentation are essential.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        How do you balance security with device performance?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Use lightweight cryptographic algorithms, optimize protocols for resource-constrained devices, and implement adaptive security that adjusts based on threat levels and available resources.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Bar -->
+    <div class="tools-bar">
+        <button id="darkModeToggle" class="tool-btn" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="glossaryBtn" class="tool-btn" title="Open Glossary">
+            <i class="fas fa-book"></i>
+        </button>
+    </div>
+
+    <!-- Glossary Modal -->
+    <div id="glossaryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Glossary of Terms</h5>
+                <span id="closeGlossary" class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="glossaryContent">
+                    <!-- Glossary content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 Enhancing Security in WMSNs. All rights reserved.</p>
+            <p id="currentDateTime" class="mb-0"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

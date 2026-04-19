@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposed Solutions - WMSN Security Research Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-alt"></i> WMSN Security Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introduction.html">1. Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="literature.html">2. Literature Review</a></li>
+                    <li class="nav-item"><a class="nav-link" href="methodology.html">3. Methodology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analysis.html">4. Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="solutions.html">5. Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="implementation.html">6. Implementation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="results.html">7. Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusion.html">8. Conclusion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="references.html">9. References</a></li>
+                </ul>
+                <div class="d-flex">
+                    <input type="text" id="searchInput" class="form-control me-2" placeholder="Search content...">
+                    <button class="btn btn-outline-light me-2" onclick="searchContent()">Search</button>
+                    <button class="btn btn-outline-light" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="progress-container">
+        <div class="progress-bar-custom" id="progressBar"></div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Project Home</a></li>
+                        <li class="breadcrumb-item active">Chapter 5: Proposed Solutions</li>
+                    </ol>
+                </nav>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="h3 mb-0">Chapter 5: Proposed Solutions</h1>
+                        <small class="text-light">Advanced Security Framework for Wireless Medical Sensor Networks</small>
+                    </div>
+                    <div class="card-body">
+                        <div class="chapter-content">
+                            <h2>5.1 Integrated Security Framework Architecture</h2>
+                            <p>This research proposes a comprehensive, multi-layered security framework specifically designed for Wireless Medical Sensor Networks. The framework integrates cryptographic protection, intrusion detection, and adaptive security mechanisms while maintaining the performance requirements of medical applications.</p>
+
+                            <div class="framework-overview">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="framework-diagram">
+                                            <div class="framework-layer physical-layer">
+                                                <h6><i class="fas fa-microchip"></i> Physical Layer Security</h6>
+                                                <small>Hardware-based root of trust, secure boot, tamper detection</small>
+                                            </div>
+                                            <div class="framework-layer network-layer">
+                                                <h6><i class="fas fa-network-wired"></i> Network Layer Security</h6>
+                                                <small>ECC-based authentication, AES-GCM encryption, secure routing</small>
+                                            </div>
+                                            <div class="framework-layer application-layer">
+                                                <h6><i class="fas fa-server"></i> Application Layer Security</h6>
+                                                <small>Access control, data integrity, privacy preservation</small>
+                                            </div>
+                                            <div class="framework-layer monitoring-layer">
+                                                <h6><i class="fas fa-eye"></i> Security Monitoring</h6>
+                                                <small>AI-driven IDS, anomaly detection, real-time alerting</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="framework-benefits">
+                                            <h5>Key Advantages</h5>
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Energy-efficient design</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Scalable architecture</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Regulatory compliant</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Real-time protection</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Adaptive security</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.2 Cryptographic Solutions</h2>
+
+                            <div class="cryptographic-solutions">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                <h5>Elliptic Curve Cryptography (ECC-P256)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <h6>Authentication Protocol</h6>
+                                                <div class="algorithm-specs">
+                                                    <strong>Key Features:</strong>
+                                                    <ul class="small">
+                                                        <li>256-bit key strength equivalent to 3072-bit RSA</li>
+                                                        <li>Ephemeral key exchange for perfect forward secrecy</li>
+                                                        <li>ECDH for shared secret derivation</li>
+                                                        <li>ECDSA for digital signatures</li>
+                                                    </ul>
+                                                    <strong>Performance:</strong>
+                                                    <ul class="small">
+                                                        <li>Authentication latency: 45ms</li>
+                                                        <li>Energy consumption: 12.3 mJ per session</li>
+                                                        <li>Memory footprint: 8.2 KB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                <h5>Advanced Encryption Standard (AES-256-GCM)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <h6>Data Encryption Protocol</h6>
+                                                <div class="algorithm-specs">
+                                                    <strong>Security Properties:</strong>
+                                                    <ul class="small">
+                                                        <li>Authenticated encryption with associated data</li>
+                                                        <li>Galois/Counter Mode for parallel processing</li>
+                                                        <li>128-bit authentication tags</li>
+                                                        <li>Resistance to timing attacks</li>
+                                                    </ul>
+                                                    <strong>Performance:</strong>
+                                                    <ul class="small">
+                                                        <li>Throughput: 2.1 MB/s on ESP32</li>
+                                                        <li>Encryption overhead: 8.7%</li>
+                                                        <li>Latency: 12.3ms average</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hybrid-approach">
+                                    <h5>Hybrid Cryptographic Framework</h5>
+                                    <p>The proposed solution combines asymmetric cryptography for authentication with symmetric cryptography for data protection, optimizing both security and performance:</p>
+
+                                    <div class="hybrid-diagram">
+                                        <div class="hybrid-step">
+                                            <div class="step-number">1</div>
+                                            <div class="step-desc">
+                                                <strong>ECC Handshake:</strong> Secure key establishment using ECDH
+                                            </div>
+                                        </div>
+                                        <div class="hybrid-step">
+                                            <div class="step-number">2</div>
+                                            <div class="step-desc">
+                                                <strong>Session Key Derivation:</strong> HKDF from shared secret
+                                            </div>
+                                        </div>
+                                        <div class="hybrid-step">
+                                            <div class="step-number">3</div>
+                                            <div class="step-desc">
+                                                <strong>AES-GCM Encryption:</strong> Authenticated bulk data encryption
+                                            </div>
+                                        </div>
+                                        <div class="hybrid-step">
+                                            <div class="step-number">4</div>
+                                            <div class="step-desc">
+                                                <strong>Perfect Forward Secrecy:</strong> Ephemeral keys prevent compromise
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.3 Intrusion Detection System</h2>
+
+                            <div class="ids-framework">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h5>AI-Driven Anomaly Detection</h5>
+                                        <p>The IDS employs machine learning techniques specifically adapted for resource-constrained medical sensor environments:</p>
+
+                                        <div class="ml-approach">
+                                            <div class="approach-item">
+                                                <h6><i class="fas fa-brain text-primary"></i> Autoencoder Neural Network</h6>
+                                                <p>Unsupervised learning for anomaly detection without requiring labeled attack data. The model learns normal network behavior patterns and flags deviations as potential security threats.</p>
+                                            </div>
+                                            <div class="approach-item">
+                                                <h6><i class="fas fa-chart-line text-success"></i> Feature Engineering</h6>
+                                                <p>Domain-specific features including packet timing, energy consumption patterns, routing behavior, and communication frequency analysis.</p>
+                                            </div>
+                                            <div class="approach-item">
+                                                <h6><i class="fas fa-tachometer-alt text-warning"></i> Real-time Processing</h6>
+                                                <p>Edge computing approach ensures detection latency under 10ms with minimal impact on medical data transmission.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="ids-performance">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h6>IDS Performance Metrics</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="metric-item">
+                                                        <span class="metric-label">Detection Accuracy:</span>
+                                                        <span class="metric-value text-success">97.4%</span>
+                                                    </div>
+                                                    <div class="metric-item">
+                                                        <span class="metric-label">False Positive Rate:</span>
+                                                        <span class="metric-value text-info">2.1%</span>
+                                                    </div>
+                                                    <div class="metric-item">
+                                                        <span class="metric-label">Processing Latency:</span>
+                                                        <span class="metric-value text-primary">8ms</span>
+                                                    </div>
+                                                    <div class="metric-item">
+                                                        <span class="metric-label">Memory Usage:</span>
+                                                        <span class="metric-value text-secondary">15.6 KB</span>
+                                                    </div>
+                                                    <div class="metric-item">
+                                                        <span class="metric-label">Energy Overhead:</span>
+                                                        <span class="metric-value text-warning">3.2%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.4 Access Control and Authorization</h2>
+
+                            <div class="access-control">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5>Role-Based Access Control (RBAC)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Hierarchical access control framework adapted for healthcare environments:</p>
+                                                <ul>
+                                                    <li><strong>Patient Role:</strong> Access to personal health data only</li>
+                                                    <li><strong>Healthcare Provider:</strong> Access to assigned patient data</li>
+                                                    <li><strong>Administrator:</strong> System configuration and audit access</li>
+                                                    <li><strong>Emergency Access:</strong> Temporary elevated privileges</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5>Attribute-Based Encryption (ABE)</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Fine-grained access control using cryptographic policies:</p>
+                                                <ul>
+                                                    <li><strong>Policy-based Encryption:</strong> Data encrypted with access policies</li>
+                                                    <li><strong>Key Generation:</strong> User keys based on attributes and roles</li>
+                                                    <li><strong>Decentralized Control:</strong> No central access control server required</li>
+                                                    <li><strong>Audit Capability:</strong> Cryptographic access logging</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.5 Secure Routing Protocols</h2>
+
+                            <div class="routing-security">
+                                <h5>Blockchain-Enhanced Routing</h5>
+                                <p>A novel routing protocol that combines traditional ad-hoc routing with blockchain-based trust management:</p>
+
+                                <div class="routing-features">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="routing-feature">
+                                                <i class="fas fa-link text-primary fa-2x mb-2"></i>
+                                                <h6>Trust-based Forwarding</h6>
+                                                <p>Routing decisions based on cryptographic trust scores maintained in distributed ledger</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="routing-feature">
+                                                <i class="fas fa-shield-alt text-success fa-2x mb-2"></i>
+                                                <h6>Path Authentication</h6>
+                                                <p>Cryptographic verification of routing paths to prevent man-in-the-middle attacks</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="routing-feature">
+                                                <i class="fas fa-clock text-warning fa-2x mb-2"></i>
+                                                <h6>Real-time Adaptation</h6>
+                                                <p>Dynamic route selection based on current security assessments and network conditions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.6 Interactive Security Demonstrations</h2>
+
+                            <div class="interactive-demos">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5><i class="fas fa-lock"></i> Encryption Demo</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="demo-input">
+                                                    <label for="plaintext" class="form-label">Medical Data to Encrypt:</label>
+                                                    <textarea class="form-control" id="plaintext" rows="3" placeholder="Enter patient vital signs data...">Heart Rate: 72 BPM, Blood Pressure: 120/80, Temperature: 98.6°F</textarea>
+                                                </div>
+                                                <div class="demo-controls mt-3">
+                                                    <button class="btn btn-primary" onclick="simpleEncrypt()">Encrypt Data</button>
+                                                    <button class="btn btn-success" onclick="simpleDecrypt()">Decrypt Data</button>
+                                                </div>
+                                                <div class="demo-output mt-3">
+                                                    <label class="form-label">Encrypted Result:</label>
+                                                    <textarea class="form-control" id="encryptedText" rows="2" readonly></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h5><i class="fas fa-chart-bar"></i> Risk Assessment Calculator</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="risk-inputs">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Threat Level (1-10):</label>
+                                                        <input type="range" class="form-range" id="threatLevel" min="1" max="10" value="5">
+                                                        <div class="d-flex justify-content-between">
+                                                            <small>Low</small>
+                                                            <small id="threatValue">5</small>
+                                                            <small>High</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Vulnerability Level (1-10):</label>
+                                                        <input type="range" class="form-range" id="vulnerabilityLevel" min="1" max="10" value="5">
+                                                        <div class="d-flex justify-content-between">
+                                                            <small>Low</small>
+                                                            <small id="vulnerabilityValue">5</small>
+                                                            <small>High</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Impact Level (1-10):</label>
+                                                        <input type="range" class="form-range" id="impactLevel" min="1" max="10" value="5">
+                                                        <div class="d-flex justify-content-between">
+                                                            <small>Low</small>
+                                                            <small id="impactValue">5</small>
+                                                            <small>High</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-warning w-100" onclick="calculateRisk()">Calculate Risk</button>
+                                                <div class="risk-result mt-3 p-3 bg-light rounded">
+                                                    <h6>Risk Assessment Result:</h6>
+                                                    <div id="riskResult">Adjust the sliders and click calculate</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.7 Performance Optimization Techniques</h2>
+
+                            <div class="optimization-techniques">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="optimization-card">
+                                            <i class="fas fa-bolt text-warning fa-2x mb-3"></i>
+                                            <h6>Energy Optimization</h6>
+                                            <ul class="small">
+                                                <li>Adaptive security levels based on battery status</li>
+                                                <li>Efficient cryptographic implementations</li>
+                                                <li>Optimized key management schedules</li>
+                                                <li>Low-power IDS algorithms</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="optimization-card">
+                                            <i class="fas fa-tachometer-alt text-primary fa-2x mb-3"></i>
+                                            <h6>Latency Reduction</h6>
+                                            <ul class="small">
+                                                <li>Parallel cryptographic operations</li>
+                                                <li>Cached authentication states</li>
+                                                <li>Pre-computed security parameters</li>
+                                                <li>Edge processing optimization</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="optimization-card">
+                                            <i class="fas fa-memory text-success fa-2x mb-3"></i>
+                                            <h6>Memory Efficiency</h6>
+                                            <ul class="small">
+                                                <li>Compact cryptographic libraries</li>
+                                                <li>Efficient data structures</li>
+                                                <li>Dynamic memory management</li>
+                                                <li>Compressed security logs</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>5.8 Regulatory Compliance Framework</h2>
+
+                            <div class="compliance-framework">
+                                <div class="alert alert-info">
+                                    <h5><i class="fas fa-clipboard-check"></i> Compliance Mapping</h5>
+                                    <p>The proposed security framework is designed to meet multiple regulatory requirements simultaneously:</p>
+                                </div>
+
+                                <div class="compliance-matrix">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th>Security Control</th>
+                                                    <th>HIPAA</th>
+                                                    <th>GDPR</th>
+                                                    <th>ISO 27001</th>
+                                                    <th>FDA Guidance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ECC-based Authentication</td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AES-256 Encryption</td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AI-based IDS</td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-partial text-warning"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Access Control</td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Audit Logging</td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                    <td><i class="fas fa-check text-success"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Sidebar -->
+    <div class="tools-sidebar" id="toolsSidebar">
+        <div class="tools-header">
+            <h5>Research Tools</h5>
+            <button class="btn-close" onclick="toggleTools()"></button>
+        </div>
+        <div class="tools-content">
+            <div class="tool-item">
+                <h6>Real-time Clock</h6>
+                <div id="currentDateTime" class="small text-muted"></div>
+            </div>
+            <div class="tool-item">
+                <h6>Reading Progress</h6>
+                <div class="progress">
+                    <div class="progress-bar" id="readingProgress" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="tool-item">
+                <button class="btn btn-outline-primary btn-sm w-100" onclick="openGlossary()">
+                    <i class="fas fa-book"></i> Glossary
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="toggleTools()" title="Research Tools">
+        <i class="fas fa-tools"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>WMSN Security Research Project</h5>
+                    <p>Chapter 5: Proposed Solutions - Page 5.1</p>
+        </div>
+        <div class="col-md-6 text-end">
+            <p>&copy; 2026 Research Project. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

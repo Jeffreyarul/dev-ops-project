@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Methodology - WMSN Security Research Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-alt"></i> WMSN Security Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introduction.html">1. Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="literature.html">2. Literature Review</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="methodology.html">3. Methodology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analysis.html">4. Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solutions.html">5. Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="implementation.html">6. Implementation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="results.html">7. Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusion.html">8. Conclusion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="references.html">9. References</a></li>
+                </ul>
+                <div class="d-flex">
+                    <input type="text" id="searchInput" class="form-control me-2" placeholder="Search content...">
+                    <button class="btn btn-outline-light me-2" onclick="searchContent()">Search</button>
+                    <button class="btn btn-outline-light" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="progress-container">
+        <div class="progress-bar-custom" id="progressBar"></div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../index.html">Project Home</a></li>
+                        <li class="breadcrumb-item active">Chapter 3: Research Methodology</li>
+                    </ol>
+                </nav>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="h3 mb-0">Chapter 3: Research Methodology</h1>
+                        <small class="text-light">Systematic Approach to WMSN Security Analysis</small>
+                    </div>
+                    <div class="card-body">
+                        <div class="chapter-content">
+                            <h2>3.1 Research Design</h2>
+                            <p>This study employs a mixed-methods research design combining theoretical analysis, empirical investigation, and practical implementation to comprehensively address WMSN security challenges.</p>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body">
+                                            <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                                            <h5>Exploratory Research</h5>
+                                            <p>Literature review and gap analysis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body">
+                                            <i class="fas fa-flask fa-3x text-success mb-3"></i>
+                                            <h5>Experimental Research</h5>
+                                            <p>Security protocol implementation and testing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center mb-3">
+                                        <div class="card-body">
+                                            <i class="fas fa-chart-line fa-3x text-info mb-3"></i>
+                                            <h5>Analytical Research</h5>
+                                            <p>Performance evaluation and optimization</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>3.2 Research Framework</h2>
+
+                            <div class="methodology-framework">
+                                <div class="framework-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Problem Identification</h5>
+                                        <p>Systematic analysis of WMSN security vulnerabilities through literature review and threat modeling</p>
+                                    </div>
+                                </div>
+                                <div class="framework-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Solution Design</h5>
+                                        <p>Development of security protocols and algorithms tailored for medical sensor networks</p>
+                                    </div>
+                                </div>
+                                <div class="framework-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Implementation</h5>
+                                        <p>Prototype development and integration of security mechanisms</p>
+                                    </div>
+                                </div>
+                                <div class="framework-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h5>Evaluation</h5>
+                                        <p>Performance testing, security analysis, and validation against requirements</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>3.3 Data Collection Methods</h2>
+
+                            <div class="accordion" id="methodologyAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#literatureData">
+                                            <strong>3.3.1 Literature Data Collection</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="literatureData" class="accordion-collapse collapse show" data-bs-parent="#methodologyAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Systematic Review:</strong> Comprehensive analysis of peer-reviewed publications (2010-2024)</li>
+                                                <li><strong>Database Sources:</strong> IEEE Xplore, ACM Digital Library, PubMed, ScienceDirect</li>
+                                                <li><strong>Search Criteria:</strong> "Wireless Medical Sensor Networks" AND ("Security" OR "Privacy")</li>
+                                                <li><strong>Inclusion Criteria:</strong> Empirical studies, theoretical frameworks, implementation reports</li>
+                                                <li><strong>Quality Assessment:</strong> Journal impact factor, citation count, methodology rigor</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experimentalData">
+                                            <strong>3.3.2 Experimental Data Collection</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="experimentalData" class="accordion-collapse collapse" data-bs-parent="#methodologyAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Simulation Environment:</strong> NS-3 network simulator with medical sensor extensions</li>
+                                                <li><strong>Hardware Testing:</strong> Raspberry Pi-based sensor nodes with ESP32 modules</li>
+                                                <li><strong>Performance Metrics:</strong> Latency, throughput, energy consumption, security overhead</li>
+                                                <li><strong>Attack Scenarios:</strong> Man-in-the-middle, denial-of-service, data tampering</li>
+                                                <li><strong>Sample Size:</strong> 50 simulation runs per test scenario with statistical significance</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#validationData">
+                                            <strong>3.3.3 Validation Data Collection</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="validationData" class="accordion-collapse collapse" data-bs-parent="#methodologyAccordion">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li><strong>Expert Review:</strong> Validation by cybersecurity and medical IoT specialists</li>
+                                                <li><strong>Standards Compliance:</strong> HIPAA, GDPR, ISO/IEC 27001 requirements assessment</li>
+                                                <li><strong>Peer Review:</strong> Manuscript submission to IEEE Transactions on Information Forensics</li>
+                                                <li><strong>User Testing:</strong> Healthcare professional feedback on usability and effectiveness</li>
+                                                <li><strong>Reproducibility:</strong> Open-source code repository and detailed documentation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>3.4 Analysis Techniques</h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Quantitative Analysis</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Statistical analysis of performance metrics</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Comparative evaluation of security protocols</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Energy consumption modeling</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Risk assessment calculations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Qualitative Analysis</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="list-unstyled">
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Threat modeling and risk analysis</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Security requirement prioritization</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Usability assessment</li>
+                                                <li><i class="fas fa-check-circle text-success me-2"></i>Regulatory compliance evaluation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>3.5 Research Limitations</h2>
+
+                            <div class="alert alert-warning">
+                                <h5><i class="fas fa-exclamation-triangle"></i> Scope Limitations</h5>
+                                <ul>
+                                    <li><strong>Resource Constraints:</strong> Limited access to proprietary medical devices for testing</li>
+                                    <li><strong>Time Frame:</strong> Research conducted over 6-month period with iterative development</li>
+                                    <li><strong>Scope Focus:</strong> Primary emphasis on network-layer security; physical security partially addressed</li>
+                                    <li><strong>Validation Scope:</strong> Simulation-based testing; limited real-world clinical environment validation</li>
+                                    <li><strong>Technology Scope:</strong> Focus on IEEE 802.15.4 and Bluetooth Low Energy protocols</li>
+                                </ul>
+                            </div>
+
+                            <h2>3.6 Ethical Considerations</h2>
+                            <p>This research adheres to strict ethical guidelines for cybersecurity research involving healthcare data:</p>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-user-shield fa-2x text-primary mb-2"></i>
+                                        <h6>Data Privacy</h6>
+                                        <small>No real patient data used; synthetic datasets only</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-balance-scale fa-2x text-success mb-2"></i>
+                                        <h6>Fair Use</h6>
+                                        <small>Open-source tools and publicly available research</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <i class="fas fa-clipboard-check fa-2x text-info mb-2"></i>
+                                        <h6>Transparency</h6>
+                                        <small>Full documentation and reproducible results</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Sidebar -->
+    <div class="tools-sidebar" id="toolsSidebar">
+        <div class="tools-header">
+            <h5>Research Tools</h5>
+            <button class="btn-close" onclick="toggleTools()"></button>
+        </div>
+        <div class="tools-content">
+            <div class="tool-item">
+                <h6>Real-time Clock</h6>
+                <div id="currentDateTime" class="small text-muted"></div>
+            </div>
+            <div class="tool-item">
+                <h6>Reading Progress</h6>
+                <div class="progress">
+                    <div class="progress-bar" id="readingProgress" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="tool-item">
+                <button class="btn btn-outline-primary btn-sm w-100" onclick="openGlossary()">
+                    <i class="fas fa-book"></i> Glossary
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="toggleTools()" title="Research Tools">
+        <i class="fas fa-tools"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>WMSN Security Research Project</h5>
+                    <p>Chapter 3: Research Methodology - Page 3.1</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>&copy; 2026 Research Project. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
